@@ -1,7 +1,6 @@
 #ifndef VOCA_DATAREADER_HPP
 #define VOCA_DATAREADER_HPP
 
-#include <fstream>
 #include <string>
 #include <vector>
 

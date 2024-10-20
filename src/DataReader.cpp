@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 
 
 std::vector<std::string> DataReader::readVocaFile(std::string path) {
