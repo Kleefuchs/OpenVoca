@@ -13,6 +13,7 @@ void App::run() {
     std::cin >> inPath;
     std::vector<std::string> splitUpVocaFile = this->dataReader.readVocaFile(inPath);
     for(uint16_t i = 0; i < splitUpVocaFile.size(); i++) {
-        this->dataSeperator.seperate(splitUpVocaFile.at(i)).print();
+        this->dataList.push_back(this->dataSeperator.seperate(splitUpVocaFile.at(i)));
     }
+    std::cout << cliInteregator.aksForSolution(this->dataList.at(1));
 }
