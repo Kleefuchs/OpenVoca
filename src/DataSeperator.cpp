@@ -34,6 +34,21 @@ Data DataSeperator::seperate(std::string input) {
                     tmpVector.push_back(tmpString);
                     iterator--;
                     break;
+                } else if(input.at(iterator)=='+') {
+                    tmpVector.push_back(tmpString);
+                    tmpString.clear();
+                    iterator++;
+                    while(true) {
+                        if(input.at(iterator)=='\n') {
+                            data.extraInfo = tmpString;
+                            break;
+                        } else {
+                            tmpString.push_back(input.at(iterator));
+                        }
+                    iterator++;
+                    }
+                    iterator--;
+                    break;
                 } else {
                     tmpString.push_back(input.at(iterator));
                 }

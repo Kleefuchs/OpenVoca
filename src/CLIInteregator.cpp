@@ -5,11 +5,10 @@
 #include <string>
 #include <vector>
 
-bool CLIInteregator::aksForSolution(Data data) {
-    std::cout << "What is " << data.learnWord << " in target language?";
+bool CLIInterRogator::askForSolution(Data data) {
+    std::cout << "What is " << data.learnWord << " in target language? \n";
     std::vector<std::string> answers;
     std::string answerString = "";
-    std::cin.get();
     std::getline(std::cin, answerString);
     std::string tmpString = "";
     for(uint16_t currentCharIndex = 0; currentCharIndex < answerString.size(); currentCharIndex++) {
@@ -28,6 +27,11 @@ bool CLIInteregator::aksForSolution(Data data) {
                 atLeastOneIsRight = true;
             }
         }
+    }
+    if(atLeastOneIsRight==true) {
+        std::cout << "At least one is right!\n";
+    } else {
+        std::cout << "All are wrong!\n";
     }
     return atLeastOneIsRight;
 }

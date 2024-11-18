@@ -11,7 +11,7 @@ class App {
         DataReader dataReader;
         std::vector<Data> dataList;
         DataSeperator dataSeperator;
-        CLIInteregator cliInteregator;
+        CLIInterRogator cliInterrogator;
         void printIntroText();
     public:
         void run();

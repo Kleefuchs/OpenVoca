@@ -1,12 +1,13 @@
-#ifndef VOCA_CLI_INTEREGATOR_HPP
-#define VOCA_CLI_INTEREGATOR_HPP
+#ifndef VOCA_CLI_INTERREGATOR_HPP
+#define VOCA_CLI_INTERREGATOR_HPP
 
 #include "Data.hpp"
-class CLIInteregator {
+#include "InterRogator.hpp"
+
+class CLIInterRogator : public InterRogator {
     private:
     public:
-        /*Asks user for solution in CLI and if one of them is correct it returns true*/
-        bool aksForSolution(Data data);
+        bool askForSolution(Data data);
 };
 
 #endif
