@@ -8,7 +8,7 @@ Data DataSeperator::seperate(std::string input) {
     std::string tmpString = "";
     uint16_t iterator = 0;
     //figuring out the learnword:
-    while(true) {
+    while(true) { //Reads the learnWord
         if(input.at(iterator)=='=') {
             iterator++;
             break;
@@ -32,7 +32,7 @@ Data DataSeperator::seperate(std::string input) {
                     break;
                 } else if (input.at(iterator)=='\n') {
                     tmpVector.push_back(tmpString);
-                    iterator--;
+                    iterator--; //Jump back because breaking means ++ and you don't want any change
                     break;
                 } else if(input.at(iterator)=='+') {
                     tmpVector.push_back(tmpString);
@@ -47,7 +47,7 @@ Data DataSeperator::seperate(std::string input) {
                         }
                     iterator++;
                     }
-                    iterator--;
+                    iterator--;//Jump back because breaking means ++ and you don't want any change
                     break;
                 } else {
                     tmpString.push_back(input.at(iterator));
